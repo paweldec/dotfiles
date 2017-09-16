@@ -1,0 +1,30 @@
+[user]
+	email = %USER_EMAIL% 
+	name = %USER_NAME%
+[core]
+	editor = vim
+[alias]
+	lo = log --graph --decorate --oneline --color
+	loa = log --graph --decorate --oneline --color --all
+        loo = log --graph --pretty=format:'%C(yellow)%h%C(red)%d%C(reset) %s (%C(green)%cN%C(reset), %C(cyan)%cr%C(reset))'
+	s = status
+        showc = show --color
+	br = branch
+	dc = diff --color --word-diff
+        dcc = diff --color --word-diff --cached
+	co = checkout
+        addp = add --patch
+	cm = commit
+        cmm = commit -m
+        save = commit --amend --no-edit
+	pr = pull --rebase
+	st = stash
+	stp = stash pop
+        ignore = update-index --assume-unchanged
+        unignore = update-index --no-assume-unchanged
+        ignored = !git ls-files -v | grep "^[[:lower:]]"
+        flush = reset --hard HEAD
+[merge]
+	tool = vimdiff
+[push]
+        default = current
